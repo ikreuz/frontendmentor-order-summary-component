@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --border-card: 1.3rem;
+    --border-button: 1rem;
+
+    --box-img-width: 100%;
+    --box-img-height: 160px;
+
+    --card-width: 327px;
+    --card-heigth: 567px;
+
+    --color-pale-blue: hsl(225, 100%, 94%);
+    --color-bright-blue: hsl(245, 75%, 52%);
+
+    --color-very-pale-blue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-dark-blue: hsl(223, 47%, 23%);
+
+    --color-black: hsl(0, 0%, 0%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-attribution: hsl(228, 45%, 44%);
+
+    --font-size: 16px;
+    --font-size-attribution: .8rem;
+    --font-base: 'Red Hat Display', sans-serif;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-900: 900;
+
+    --max-width: 1445px;
+    --min-width: 97vh;
+
+    --plan-list-avatar-height: 3rem;
+    --plan-list-avatar-width: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-pale-blue);
+    font-family: var(--font-base);
+    font-size: var(--font-size);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    min-height: var(--min-width);
+    padding: 0;
+}
+
+
+/** Section Card */
+.card {
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: var(--card-width);
+    height: var(--card-heigth);
+    border-radius: var(--border-card);
+    box-shadow: rgb(9 30 66 / 25%) 0 0 30px 0px, rgb(9 30 66 / 31%) 0 0 0px 0px;
+}
+
+/** Section Box */
+.card .box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: var(--card-width);
+}
+
+/** Section Box-Img */
+.card .box .box-img {
+    background-image: url('../images/illustration-hero.svg');
+    height: var(--box-img-height);
+    width: var(--box-img-width);
+    background-repeat: round;
+    overflow: hidden;
+    background-color: var(--color-background-accent);
+    border-top-left-radius: var(--border-card);
+    border-top-right-radius: var(--border-card);
+    z-index: 2;
+}
+
+/** Section Box-Content */
+.card .box .box-content-header {
+    color: var(--color-dark-blue);
+    align-self: center;
+    padding: 1.9rem 0 1.1rem;
+}
+
+.card .box .box-content-paragraph {
+    margin: 0 2rem;
+}
+
+.card .box .box-content-header,
+.card .box .box-content-paragraph {
+    font-weight: var(--font-weight-500);
+    display: flex;
+    text-align: center;
+}
+
+.card .box .box-content-paragraph .paragraph {
+    line-height: 1.5;
+    color: var(--color-desaturated-blue);
+}
+
+.card .box .box-content-plan {
+    padding: 1.5rem 1.5rem 0;
+}
+
+.card .box .box-content-plan .box-content-plan-list {
+    display: flex;
+    background-color: var(--color-very-pale-blue);
+    min-height: var(--plan-list-min-height);
+    position: relative;
+    border-radius: var(--border-button);
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.card .box .box-content-plan .box-content-plan-list .plan-list-avatar {
+    background-image: url('../images/icon-music.svg');
+    height: var(--plan-list-avatar-height);
+    width: var(--plan-list-avatar-width);
+    background-repeat: no-repeat;
+}
+
+.card .box .box-content-plan .box-content-plan-list .plan-list-content {
+    padding: 0 1rem;
+}
+
+.card .box .box-content-plan .box-content-plan-list .plan-list-content .plan-list-annual {
+    font-weight: var(--font-weight-900);
+}
+
+.card .box .box-content-plan .box-content-plan-list .plan-list-content .plan-list-year {
+    color: var(--color-desaturated-blue);
+    font-weight: var(--font-weight-500);
+    padding-top: .2rem;
+}
+
+.card .box .box-content-plan .box-content-plan-list .plan-list-action {
+    color: var(--color-bright-blue);
+    text-decoration: underline;
+    padding: 0 0 0 1rem;
+    align-self: center;
+    cursor: pointer;
+}
+
+/** Section Box-Action */
+
+.card .box .box-action {
+    color: var(--color-text-paragraph);
+    font-family: var(--font-heading);
+    display: flex;
+    flex-direction: column;
+    margin: 1.4rem 1.4rem 0 1.4rem;
+}
+
+.card .box .box-action .action-button {
+    display: block;
+    background-color: var(--color-bright-blue);
+    color: var(--color-very-pale-blue);
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    min-width: 100%;
+    border-radius: var(--border-button);
+    text-decoration: none;
+    border: 1px solid #eeeff4;
+    font-weight: var(--font-weight-900);
+}
+
+.card .box .box-action .action-disabled {
+    display: block;
+    color: var(--color-dark-blue);
+    font-weight: var(--font-weight-900);
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    min-width: 100%;
+    border-radius: var(--border-button);
+    text-decoration: none;
+    border: 1px solid var(--color-white);
+    margin-top: .4rem;
+}
+
+
+/** Section Footer */
+footer .attribution {
+    color: var(--color-text-paragraph);
+}
+
+footer .attribution {
+    font-size: .8rem;
+    text-align: center;
+}
+
+footer .attribution a {
+    color: hsl(228, 45%, 44%);
+}
