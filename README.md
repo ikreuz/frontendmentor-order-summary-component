@@ -21,7 +21,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
 ### Links
 
 - Solution URL: [https://github.com/ikreuz](https://github.com/ikreuz/frontendmentor-order-summary-component.git)
-- Live Site URL: []()
+- Live Site URL: [https://frontendmentor-order-summary-component-tau.vercel.app/](https://frontendmentor-order-summary-component-tau.vercel.app/)
 
 ## My process
 
