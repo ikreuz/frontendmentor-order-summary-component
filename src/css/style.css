@@ -42,9 +42,12 @@
 }
 
 body {
+    background-image: url('../images/pattern-background-desktop.svg');
+    background-repeat: repeat-x;
     background-color: var(--color-pale-blue);
     font-family: var(--font-base);
     font-size: var(--font-size);
+    overflow: hidden;
 }
 
 .container {
@@ -61,13 +64,13 @@ body {
 /** Section Card */
 .card {
     background-color: var(--color-white);
+    border-radius: var(--border-card);
+    box-shadow: rgb(9 30 66 / 25%) 0 0 30px 0px, rgb(9 30 66 / 31%) 0 0 0px 0px;
     display: flex;
+    height: var(--card-heigth);
     justify-content: center;
     margin: 0 auto;
     width: var(--card-width);
-    height: var(--card-heigth);
-    border-radius: var(--border-card);
-    box-shadow: rgb(9 30 66 / 25%) 0 0 30px 0px, rgb(9 30 66 / 31%) 0 0 0px 0px;
 }
 
 /** Section Box */
@@ -81,20 +84,20 @@ body {
 /** Section Box-Img */
 .card .box .box-img {
     background-image: url('../images/illustration-hero.svg');
-    height: var(--box-img-height);
-    width: var(--box-img-width);
     background-repeat: round;
-    overflow: hidden;
     background-color: var(--color-background-accent);
     border-top-left-radius: var(--border-card);
     border-top-right-radius: var(--border-card);
+    height: var(--box-img-height);
+    overflow: hidden;
+    width: var(--box-img-width);
     z-index: 2;
 }
 
 /** Section Box-Content */
 .card .box .box-content-header {
-    color: var(--color-dark-blue);
     align-self: center;
+    color: var(--color-dark-blue);
     padding: 1.9rem 0 1.1rem;
 }
 
@@ -121,18 +124,18 @@ body {
 .card .box .box-content-plan .box-content-plan-list {
     display: flex;
     background-color: var(--color-very-pale-blue);
-    min-height: var(--plan-list-min-height);
-    position: relative;
     border-radius: var(--border-button);
-    padding: 1rem;
     justify-content: space-between;
+    min-height: var(--plan-list-min-height);
+    padding: 1rem;
+    position: relative;
 }
 
 .card .box .box-content-plan .box-content-plan-list .plan-list-avatar {
     background-image: url('../images/icon-music.svg');
+    background-repeat: no-repeat;
     height: var(--plan-list-avatar-height);
     width: var(--plan-list-avatar-width);
-    background-repeat: no-repeat;
 }
 
 .card .box .box-content-plan .box-content-plan-list .plan-list-content {
@@ -150,49 +153,49 @@ body {
 }
 
 .card .box .box-content-plan .box-content-plan-list .plan-list-action {
-    color: var(--color-bright-blue);
-    text-decoration: underline;
-    padding: 0 0 0 1rem;
     align-self: center;
     cursor: pointer;
+    color: var(--color-bright-blue);
+    padding: 0 0 0 1rem;
+    text-decoration: underline;
 }
 
 /** Section Box-Action */
 
 .card .box .box-action {
     color: var(--color-text-paragraph);
-    font-family: var(--font-heading);
     display: flex;
+    font-family: var(--font-heading);
     flex-direction: column;
     margin: 1.4rem 1.4rem 0 1.4rem;
 }
 
 .card .box .box-action .action-button {
-    display: block;
     background-color: var(--color-bright-blue);
-    color: var(--color-very-pale-blue);
-    text-align: center;
-    cursor: pointer;
-    padding: 1rem;
-    min-width: 100%;
-    border-radius: var(--border-button);
-    text-decoration: none;
     border: 1px solid #eeeff4;
+    border-radius: var(--border-button);
+    display: block;
+    color: var(--color-very-pale-blue);
+    cursor: pointer;
     font-weight: var(--font-weight-900);
+    min-width: 100%;
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
 }
 
 .card .box .box-action .action-disabled {
     display: block;
     color: var(--color-dark-blue);
+    border: 1px solid var(--color-white);
+    border-radius: var(--border-button);
+    cursor: pointer;
     font-weight: var(--font-weight-900);
     text-align: center;
-    cursor: pointer;
+    margin-top: .4rem;
     padding: 1rem;
     min-width: 100%;
-    border-radius: var(--border-button);
     text-decoration: none;
-    border: 1px solid var(--color-white);
-    margin-top: .4rem;
 }
 
 
@@ -208,4 +211,13 @@ footer .attribution {
 
 footer .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+@media only screen and (max-width: 375px) {
+    body {
+        background-image: url('../images/pattern-background-mobile.svg');
+        background-repeat: repeat-x;
+        overflow: hidden;
+    }
 }
